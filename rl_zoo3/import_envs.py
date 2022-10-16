@@ -1,5 +1,7 @@
 import gym
 from gym.envs.registration import register
+import gymdinoenv
+from gymdinoenv.wrappers import FrameStackRecorder, MonochromeEnsureBlackBackgroundWrapper
 
 from rl_zoo3.wrappers import MaskVelocityWrapper
 
@@ -58,10 +60,17 @@ def create_no_vel_env(env_id: str):
 
     return make_env
 
-
 for env_id in MaskVelocityWrapper.velocity_indices.keys():
     name, version = env_id.split("-v")
     register(
         id=f"{name}NoVel-v{version}",
         entry_point=create_no_vel_env(env_id),
     )
+
+
+try:
+    import gymdinoenv
+    from gymdinoenv.wrappers import FrameStackRecorder, MonochromeEnsureBlackBackgroundWrapper
+    from rl_zoo3.modifiednaturecnn import ModifiedNatureCNN
+except ImportError as e:
+    print(e)
