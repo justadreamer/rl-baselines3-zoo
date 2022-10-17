@@ -9,12 +9,13 @@ DinoEnv-v0:
   buffer_size: 100000
   learning_rate: !!float 1e-4
   batch_size: 32
-  learning_starts: 100000
+  learning_starts: 10000
   target_update_interval: 1000
-  train_freq: 4
+  train_freq: 1
   gradient_steps: 1
   exploration_fraction: 0.1
   exploration_final_eps: 0.01
+  device: mps
   policy_kwargs: "dict(features_extractor_class=rl_zoo3.modifiednaturecnn.ModifiedNatureCNN)"
 
 
