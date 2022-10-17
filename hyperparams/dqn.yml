@@ -15,7 +15,6 @@ DinoEnv-v0:
   gradient_steps: 1
   exploration_fraction: 0.1
   exploration_final_eps: 0.01
-  device: mps
   policy_kwargs: "dict(features_extractor_class=rl_zoo3.modifiednaturecnn.ModifiedNatureCNN)"
 
 
