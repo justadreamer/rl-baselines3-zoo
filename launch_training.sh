@@ -1,4 +1,4 @@
- train.py \
+ python train.py \
         --device mps \
         --wandb-entity justadreamer2007 \
         --wandb-project-name dino-dqn \
