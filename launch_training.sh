@@ -5,4 +5,4 @@
         --algo dqn \
         --env DinoEnv-v0 \
         --tensorboard-log tblogs \
-        --trained-agent logs/dqn/DinoEnv-v0_5/best_model.zip
+        --trained-agent logs/dqn/DinoEnv-v0_6/best_model.zip
