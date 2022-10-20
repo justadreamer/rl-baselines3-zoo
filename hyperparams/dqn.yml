@@ -3,17 +3,17 @@ DinoEnv-v0:
     - gymdinoenv.wrappers.MonochromeEnsureBlackBackgroundWrapper
     - gym.wrappers.FrameStack:
         num_stack: 4
-    - gymdinoenv.wrappers.FrameStackRecorder
+#    - gymdinoenv.wrappers.FrameStackRecorder
   policy: 'CnnPolicy'
   n_timesteps: !!float 1e7
   buffer_size: 100000
-  learning_rate: !!float 1e-4
+  learning_rate: !!float 1e-3
   batch_size: 32
-  learning_starts: 10000
+  learning_starts: 100000
   target_update_interval: 1000
   train_freq: 1
   gradient_steps: 1
-  exploration_fraction: 0.001
+  exploration_fraction: 0.01
   exploration_final_eps: 0.05
   policy_kwargs: "dict(features_extractor_class=rl_zoo3.modifiednaturecnn.ModifiedNatureCNN)"
 
