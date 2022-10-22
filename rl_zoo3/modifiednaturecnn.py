@@ -24,7 +24,7 @@ class ModifiedNatureCNN(BaseFeaturesExtractor):
 
         n_input_channels = observation_space.shape[0]
 
-        self.cnn = nn.Sequential( #3 x 150 x 75
+        self.cnn = nn.Sequential( #4 x 150 x 75
             nn.Conv2d(n_input_channels, 32, kernel_size=8, stride=4, padding=0),  #32 x 37 x 18
             nn.ReLU(),
             nn.Conv2d(32, 64, kernel_size=4, stride=2, padding=0),  #64 x 15 x 8
