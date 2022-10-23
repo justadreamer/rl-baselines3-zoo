@@ -2,11 +2,11 @@ DinoEnv-v0:
   env_wrapper:
     - gymdinoenv.wrappers.MonochromeEnsureBlackBackgroundWrapper
     - gym.wrappers.FrameStack:
-        num_stack: 4
+        num_stack: 2
 #    - gymdinoenv.wrappers.FrameStackRecorder
   policy: 'CnnPolicy'
   n_timesteps: !!float 1e7
-  buffer_size: 50000
+  buffer_size: 100000
   learning_rate: !!float 1e-3
   batch_size: 32
   learning_starts: 1000
