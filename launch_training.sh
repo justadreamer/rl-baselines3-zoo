@@ -1,6 +1,6 @@
  python train.py \
         --device mps \
-        --track \
+#        --track \
         --wandb-entity justadreamer2007 \
         --wandb-project-name dino-dqn \
         --algo dqn \
