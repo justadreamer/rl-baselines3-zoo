@@ -1,5 +1,6 @@
 DinoEnv-v0:
   env_wrapper:
+    - gymdinoenv.wrappers.LeftHalfWidthWrapper
     - gymdinoenv.wrappers.MonochromeEnsureBlackBackgroundWrapper
     - gym.wrappers.FrameStack:
         num_stack: 1
