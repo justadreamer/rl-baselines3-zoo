@@ -7,7 +7,7 @@ DinoEnv-v0:
     - gymdinoenv.wrappers.FrameStackRecorder
   policy: 'CnnPolicy'
   n_timesteps: !!float 1e7
-  buffer_size: 100000
+  buffer_size: 20000
   learning_rate: !!float 1e-4
   batch_size: 32
   learning_starts: 1000
