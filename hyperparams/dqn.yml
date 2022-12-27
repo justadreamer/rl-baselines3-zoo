@@ -3,10 +3,13 @@ DinoEnv-v0:
     - gymdinoenv.wrappers.LeftHalfWidthWrapper
     - gymdinoenv.wrappers.MonochromeEnsureBlackBackgroundWrapper
     - gym.wrappers.FrameStack:
-        num_stack: 1
+        num_stack: 2
     - gymdinoenv.wrappers.FrameStackRecorder
+    - gym.wrappers.monitor.Monitor:
+        directory: "recording"
+        force: True
   policy: 'CnnPolicy'
-  n_timesteps: !!float 1e7
+  n_timesteps: !!float 1e6
   buffer_size: 20000
   learning_rate: !!float 1e-4
   batch_size: 32
@@ -17,7 +20,7 @@ DinoEnv-v0:
   exploration_fraction: 0.001
   exploration_final_eps: 0.02
 #  policy_kwargs: "dict(normalize_images=False)"
-  policy_kwargs: "dict(features_extractor_class=rl_zoo3.modifiednaturecnn.ModifiedNatureCNN, normalize_images=False)"
+  policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(normalized_image=True))"
 
 
 atari:
