@@ -12,7 +12,7 @@ DinoEnv-v0:
     - rl_zoo3.dinoenv_callback.DinoEnvCallback
   policy: 'CnnPolicy'
   n_timesteps: !!float 1e6
-  buffer_size: 20000
+  buffer_size: 50000
   learning_rate: !!float 1e-4
   batch_size: 32
   learning_starts: 1000
