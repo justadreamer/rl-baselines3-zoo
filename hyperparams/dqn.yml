@@ -11,18 +11,17 @@ DinoEnv-v0:
   callback:
     - rl_zoo3.dinoenv_callback.DinoEnvCallback
   policy: 'CnnPolicy'
-  n_timesteps: !!float 1e6
-  buffer_size: 50000
+  n_timesteps: !!float 2e5
+  buffer_size: 20000
   learning_rate: !!float 1e-4
   batch_size: 32
-  learning_starts: 1000
+  learning_starts: 10000
   target_update_interval: 1000
   train_freq: 1
   gradient_steps: 1
-  exploration_fraction: 0.01
-  exploration_final_eps: 0.02
-#  policy_kwargs: "dict(normalize_images=False)"
-  policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(normalized_image=True))"
+  exploration_fraction: 0.1
+  exploration_final_eps: 0.01
+  policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(features_dim=1024))"
 
 
 atari:
