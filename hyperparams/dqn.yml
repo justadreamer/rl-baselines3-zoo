@@ -21,7 +21,7 @@ DinoEnv-v0:
   gradient_steps: 1
   exploration_fraction: 0.1
   exploration_final_eps: 0.01
-  policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(features_dim=1024))"
+  policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(features_dim=256))"
 
 
 atari:
