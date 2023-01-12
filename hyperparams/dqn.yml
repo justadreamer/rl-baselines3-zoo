@@ -11,7 +11,7 @@ DinoEnv-v0:
   callback:
     - rl_zoo3.dinoenv_callback.DinoEnvCallback
   policy: 'CnnPolicy'
-  n_timesteps: !!float 8e5
+  n_timesteps: !!float 2.5e5
   buffer_size: 20000
   learning_rate: !!float 1e-4
   batch_size: 32
@@ -19,7 +19,7 @@ DinoEnv-v0:
   target_update_interval: 2000
   train_freq: 1
   gradient_steps: 1
-  exploration_fraction: 0.05
+  exploration_fraction: 0.04
   exploration_final_eps: 0.01
   policy_kwargs: "dict(normalize_images=False, features_extractor_kwargs=dict(features_dim=2048))"
 
