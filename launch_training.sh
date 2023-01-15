@@ -5,7 +5,7 @@ python train.py \
       --wandb-project-name dino-dqn \
       --algo dqn \
       --env DinoEnv-v0 \
-      --env-kwargs mark_action:True accelerate:False \
+      --env-kwargs mark_action:True accelerate:True \
       --eval-freq 5000 \
       --tensorboard-log tblogs \
       --track \
