@@ -9,4 +9,4 @@ python train.py \
       --eval-freq 5000 \
       --tensorboard-log tblogs \
       --track \
-#        --trained-agent logs/dqn/DinoEnv-v0_7/best_model.zip
+      --trained-agent logs/dqn/DinoEnv-v0_35/best_model.zip
