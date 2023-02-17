@@ -4,7 +4,7 @@ DinoEnv-v0:
     - gymdinoenv.wrappers.MonochromeEnsureBlackBackgroundWrapper
     - gymdinoenv.wrappers.Compress4XWrapper
     - gym.wrappers.FrameStack:
-        num_stack: 4
+        num_stack: 8
     - gymdinoenv.wrappers.FrameStackRecorder
     - gym.wrappers.monitor.Monitor:
         directory: "recording"
